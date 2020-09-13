@@ -1,6 +1,12 @@
-/**
- * Module Imports
- */
+const express = require("express");
+const app = express();
+
+app.listen(() => console.log("start btrolie"));
+
+app.use('/ping', (req, res) => {
+  res.send(new Date());
+});
+//Hiuu
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
